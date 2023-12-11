@@ -1,5 +1,7 @@
 const defaultConfig = require('tailwindcss/defaultConfig')
 const formsPlugin = require('@tailwindcss/forms')
+const daisyUi = require('daisyui')
+const typography = require('@tailwindcss/typography')
 
 /** @type {import('tailwindcss/types').Config} */
 const config = {
@@ -10,6 +12,6 @@ const config = {
 		}
 	},
 	experimental: { optimizeUniversalDefaults: true },
-	plugins: [formsPlugin]
+	plugins: [daisyUi, formsPlugin, typography]
 }
 module.exports = config

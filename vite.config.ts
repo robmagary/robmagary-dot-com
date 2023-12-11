@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
 import tsconfigPaths from 'vite-tsconfig-paths'
+import Markdown from 'vite-plugin-react-markdown'
 
 export default defineConfig(({ mode }) => ({
 	test: {
@@ -23,7 +24,10 @@ export default defineConfig(({ mode }) => ({
 	},
 	plugins: [
 		tsconfigPaths(),
-		react(),
+		Markdown({
+			wrapperClasses: 'prose lg:prose-xl'
+		}),
+		react({ include: [/\.md$/] }),
 		...(mode === 'test'
 			? []
 			: [

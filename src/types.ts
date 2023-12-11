@@ -13,3 +13,11 @@ export interface IFruit {
 		value: string
 	}[]
 }
+
+export interface BlogPost {
+	content: string
+	date: string
+	description?: string
+	image?: string
+	title: string
+}

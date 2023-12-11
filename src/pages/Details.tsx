@@ -1,5 +1,6 @@
 import getFruits from 'api/getFruits'
 import Head from 'components/Head'
+import Navbar from 'components/Navbar'
 import ImageAttribution from 'components/ImageAttribution'
 import LoadingOrError from 'components/LoadingOrError'
 import type { ReactElement } from 'react'
@@ -39,6 +40,7 @@ export default function DetailsPage(): ReactElement {
 	return (
 		<>
 			<Head title={fruit.name} />
+			<Navbar />
 			<div className='flex min-h-screen flex-col items-center sm:flex-row'>
 				<div className='relative'>
 					<img

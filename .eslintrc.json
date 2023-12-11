@@ -92,6 +92,7 @@
 				]
 			}
 		],
+		"import/no-named-default": "off",
 
 		"react/no-did-update-set-state": "off",
 		"react/no-find-dom-node": "off",
@@ -164,13 +165,13 @@
 	},
 	"overrides": [
 		{
-			"files": ["src/**/*.ts?(x)"],
+			"files": ["src/**/*.ts?(x)", "vite.d.ts"],
 			"parserOptions": {
 				"project": ["./tsconfig.json"]
 			}
 		},
 		{
-			"files": ["vite.config.ts", "cypress.config.ts"],
+			"files": ["vite.config.ts", "cypress.config.ts", "vite.d.ts"],
 			"parserOptions": {
 				"project": ["./tsconfig.node.json"]
 			}
